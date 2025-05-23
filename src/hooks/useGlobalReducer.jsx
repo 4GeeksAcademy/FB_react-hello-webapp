@@ -10,7 +10,7 @@ const StoreContext = createContext()
 // broadcast the information throught all the app pages and components.
 export function StoreProvider({ children }) {
     // Initialize reducer with the initial state.
-    const [store, dispatch] = useReducer(storeReducer, initialStore())
+    const [store, dispatch] = useReducer(storeReducer, initialStore)
     // Provide the store and dispatch method to all child components.
     return <StoreContext.Provider value={{ store, dispatch }}>
         {children}
